@@ -1,0 +1,77 @@
+HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Inventario</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo Inventario" id="app-logo" onerror="this.src='https://via.placeholder.com/40?text=INV'">
+            <h1>Control de Inventario</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Dashboard / Análisis -->
+        <section class="dashboard">
+            <div class="card">
+                <h3>Total Productos</h3>
+                <p id="total-productos">0</p>
+            </div>
+            <div class="card">
+                <h3>Valor Total</h3>
+                <p id="valor-total">$0.00</p>
+            </div>
+            <div class="card alert">
+                <h3>Stock Bajo (&lt; 5)</h3>
+                <p id="stock-bajo">0</p>
+            </div>
+        </section>
+
+        <!-- Formulario de Registro -->
+        <section class="form-section">
+            <h2>Registrar Producto</h2>
+            <form id="inventory-form">
+                <input type="text" id="nombre" placeholder="Nombre del producto" required>
+                <input type="number" id="cantidad" placeholder="Cantidad" min="0" required>
+                <input type="number" id="precio" placeholder="Precio ($)" step="0.01" min="0" required>
+                <button type="submit" class="btn primary">Agregar Producto</button>
+            </form>
+        </section>
+
+        <!-- Tabla de Inventario -->
+        <section class="table-section">
+            <h2>Inventario Actual</h2>
+            <table id="inventory-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario</th>
+                        <th>Subtotal</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="inventory-body">
+                    <!-- Filas dinámicas -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Informes y Entregables -->
+        <section class="reports-section">
+            <h2>Informes y Exportación</h2>
+            <div class="actions-group">
+                <button id="btn-export-txt" class="btn success">Descargar Informe (.txt)</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
