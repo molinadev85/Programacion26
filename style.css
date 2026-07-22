@@ -1,0 +1,131 @@
+ box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+.navbar {
+    background-color: #1f2937;
+    color: #fff;
+    padding: 1rem 2rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-container img {
+    height: 40px;
+    border-radius: 4px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Dashboard Cards */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #111827;
+}
+
+.card.alert p {
+    color: #dc2626;
+}
+
+/* Formulario y Tabla */
+.form-section, .table-section, .reports-section {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #374151;
+}
+
+form {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+form input {
+    flex: 1;
+    min-width: 180px;
+    padding: 0.6rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+}
+
+/* Botones */
+.btn {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn.primary { background-color: #2563eb; color: #fff; }
+.btn.primary:hover { background-color: #1d4ed8; }
+
+.btn.danger { background-color: #ef4444; color: #fff; padding: 0.3rem 0.6rem; }
+.btn.danger:hover { background-color: #dc2626; }
+
+.btn.success { background-color: #10b981; color: #fff; }
+.btn.success:hover { background-color: #059669; }
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    background-color: #f9fafb;
+    color: #4b5563;
